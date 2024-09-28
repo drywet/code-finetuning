@@ -9,7 +9,8 @@ mkdir -p files
 
 for hash in $commit_hashes; do
   commit_date_timestamp=$(git show -s --format=%ct "$hash")
-  commit_date=$(date -r "$commit_date_timestamp" -u "+%Y-%m-%dT%H:%M:%S")
+#  commit_date=$(date -r "$commit_date_timestamp" -u "+%Y-%m-%dT%H:%M:%S")
+  commit_date=$(date -d "@$commit_date_timestamp" -u "+%Y-%m-%dT%H:%M:%S")
 
   filename="${commit_date}_${hash}"
 
