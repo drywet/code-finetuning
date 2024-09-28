@@ -1,0 +1,9 @@
+/.idea
+*.ipr
+*.iml
+
+*.DS_Store
+
+/venv
+
+/adapters
