@@ -31,7 +31,7 @@ for hash in $commit_hashes; do
   done < "$list_file"
 
   if [[ $ok_files == "t" ]]; then
-    git format-patch --1 "$hash" --stdout > "$patch_file"
+    git format-patch -1 "$hash" --stdout > "$patch_file"
     touch -d "$commit_date" "$patch_file"
 
     mkdir -p "files/$filename"
